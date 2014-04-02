@@ -39,17 +39,17 @@ Connect to your rWeb/sProxy with ssh and modify *TransferLog*, *ErrorLog* and *S
     SSLLog      "| /usr/bin/logger -t 'sproxy instance_name'"
 
 *sproxy* will be substituted by *rweb* according to DenyAll system type. (*sproxy* or *rweb*)
-Then modify your syslog service to syslog to Octopussy server like any [[install#Linux systems with syslog|Linux System]].
+Then modify your syslog service to syslog to Octopussy server like any [Linux System](https://github.com/sebthebert/Octopussy_Documentation/blob/master/Configuring_Devices.md#linux-systems-with-rsyslog).
 
 
 ## Fortinet Fortigate Firewall
 
-Connect to your Fortigate WebUI, select the //'Log&Report > Log Config'// menu, then enter the IP Address of your Octopussy Server and the port 514. 
+Connect to your Fortigate WebUI, select the **'Log&Report > Log Config'** menu, then enter the IP Address of your Octopussy Server and the port 514. 
 
 
 ## Juniper DX (RedLine)
 
-Connect to your Juniper DX WebUI, select the //'Admin > Logging'// menu, then enter the IP Address of your Octopussy Server in //Syslog Host 1// or //Syslog Host 2//.
+Connect to your Juniper DX WebUI, select the **'Admin > Logging'** menu, then enter the IP Address of your Octopussy Server in **Syslog Host 1** or **Syslog Host 2**.
 
 
 
