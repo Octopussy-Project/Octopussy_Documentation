@@ -2,7 +2,7 @@
 
 ## Cisco Router/Switch (CatOS)
 
-Connect to your switch, set *enable* mode, and then type 'set logging server enable' and 'set logging server xxx.xxx.xxx.xxx':
+Connect to your switch, set `enable` mode, and then type `set logging server enable` and `set logging server xxx.xxx.xxx.xxx`:
 
     hostname>ena
     Password:
@@ -16,7 +16,7 @@ For more information to configure Catalyst Devices, check the [Cisco Documentati
 
 ## Cisco Router/Switch (IOS)
 
-Connect to your switch, set //enable// mode, go to //configure terminal// menu, and then type 'logging on' and 'logging xxx.xxx.xxx.xxx':
+Connect to your switch, set `enable` mode, go to `configure terminal` menu, and then type `logging on` and `logging xxx.xxx.xxx.xxx`:
 
     hostname>ena
     Password:
@@ -55,34 +55,34 @@ Connect to your Juniper DX WebUI, select the //'Admin > Logging'// menu, then en
 
 ## Linux systems with rsyslog
 
-In your */etc/rsyslog.conf* file, add this line:
+In your `/etc/rsyslog.conf` file, add this line:
 
     *.*                                                     @@xxx.xxx.xxx.xxx
 
 where xxx.xxx.xxx.xxx is the IP Address of your Octopussy Server.
 
-And then restart the *rsyslog* daemon.
+And then restart the **rsyslog** daemon.
 
     /etc/init.d/rsyslog restart
 
 
 ## Linux systems with syslog
 
-At the begining of your */etc/syslog.conf* file, add this line:
+At the begining of your `/etc/syslog.conf` file, add this line:
 
 
 *.*                                                     @xxx.xxx.xxx.xxx
 
 where xxx.xxx.xxx.xxx is the IP Address of your Octopussy Server.
 
-And then restart the *syslog* daemon.
+And then restart the **syslog** daemon.
 
     /etc/init.d/syslog restart
 
 
 ## Linux systems with syslog-ng
 
-In your */etc/syslog-ng/syslog-ng.conf* file, add your Octopussy server as a new 'destination':
+In your `/etc/syslog-ng/syslog-ng.conf` file, add your Octopussy server as a new 'destination':
 
     destination octopussy_server {
         udp( "xxx.xxx.xxx.xxx" port(514) );
@@ -90,12 +90,13 @@ In your */etc/syslog-ng/syslog-ng.conf* file, add your Octopussy server as a new
 
 where xxx.xxx.xxx.xxx is the IP Address of your Octopussy Server.
 Then add this destination to a log directive with the appropriate source:
+
     log {
         source(all);
         destination(octopussy_server);
     };
 
-For more information to configure syslog-ng, check the *syslog-ng.conf* man page on your system or [here](http://gentoo-wiki.com/MAN_syslog-ng.conf_5).
+For more information to configure syslog-ng, check the `syslog-ng.conf` man page on your system or [here](http://gentoo-wiki.com/MAN_syslog-ng.conf_5).
 
 
 
@@ -108,7 +109,7 @@ Connect to your NetApp NetCache WebUI, select the //'Setup > System > Logging'//
 
 ## PostgreSQL Database
 
-In your *postgresql.conf* file, add **syslog** to your **log_destination** parameter:
+In your `postgresql.conf` file, add **syslog** to your **log_destination** parameter:
 
     log_destination = 'stderr,syslog'
 
@@ -121,15 +122,15 @@ By default, Snare use [TAB] as fields delimiter ! :(
 
 You need to change that by editing the *Windows Registry* ! :(
 
-Put ";" in the key *HKEY_LOCAL_MACHINE\SOFTWARE\Intersect Alliance\AuditService\Config\Delimiter*.
+Put `;` in the key `HKEY_LOCAL_MACHINE\SOFTWARE\Intersect Alliance\AuditService\Config\Delimiter`.
 
-Go to the Snare Agent Web Interface, *Network Configuration* menu.
-Put your Octopussy Server IP address in the *Destination Snare Server address* field and 514 in the *Destination Port* field.
-Then go to the *Apply the Latest Audit Configuration* to apply these changes.
+Go to the Snare Agent Web Interface, **Network Configuration** menu.
+Put your Octopussy Server IP address in the **Destination Snare Server address** field and 514 in the **Destination Port** field.
+Then go to the **Apply the Latest Audit Configuration** to apply these changes.
 
 ## Xen
 
-Edit your */etc/syslog-ng/syslog-ng.conf* file to get logs from Xen log files and add the prefix "xen: ":
+Edit your `/etc/syslog-ng/syslog-ng.conf` file to get logs from Xen log files and add the prefix "xen: ":
 
     source s_xen {
         file("/var/log/xen/xend.log" log_prefix("xen: ") follow_freq(15) flags(no-parse));
