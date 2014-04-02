@@ -1,6 +1,8 @@
 Octopussy Documentation
 =======================
 
+![Octopussy logo](https://raw.githubusercontent.com/sebthebert/Octopussy_Documentation/master/img/pieuvre.gif)
+
 ## Table of Contents
 
 - [Installation](https://github.com/sebthebert/Octopussy_Documentation/blob/master/01_Installation.md)
