@@ -9,9 +9,19 @@ You can change that limit by editing the parameter `wizard_max_msgs` in [/etc/aa
 
 Look at the Contribution section of the [Community page](http://www.octopussy.pm/community) on official website.
 
+### How can I handle Windows Hosts ?
+
+You can use [Snare Agent for Windows](http://www.intersectalliance.com/projects/SnareWindows/) to send Windows logs to Octopussy.
+
+Take a look at [Configuring Devices / Windows Host with Snare Agent](https://github.com/sebthebert/Octopussy_Documentation/blob/master/02_Configuring_Devices.md#windows-host-with-snare-agent) section.
+
 ### How can I login to Octopussy Web interface ?
 
 The default **login / password** are **admin / admin**.
+
+### What are software requirements for Octopussy ?
+
+You can get the list of software requirements in [Installation / Standard Installation / Software Requirements](https://github.com/sebthebert/Octopussy_Documentation/blob/master/01_Installation.md#software-requirements) section.
 
 ### What is a Device in Octopussy ?
 
@@ -34,7 +44,6 @@ A Message is an object with 6 fields:
 A Service is a collection of Messages.
 
 
-
 ----------------
 TOFIX
 ### How can I configure Octopussy to interact with my LDAP/SMTP/Jabber server ? 
@@ -49,20 +58,9 @@ Look at the [Plugin Howto](http://www.octopussy.pm/documentation/howtos/plugin) 
 
 Look at the [New Service Creation](http://www.octopussy.pm/documentation/tutorials/new_service) tutorial.
 
-### How can I handle Windows Hosts ?
-
-You can use [Snare Agent for Windows](http://www.intersectalliance.com/projects/SnareWindows/) to send Windows logs to Octopussy.
-
-Take a look at [Administrator Guide/Installation/Windows Host with Snare Agent](http://www.octopussy.pm/documentation/guides/administrator_guide/01_installation).
-
 ### How can I see how many logs I received ?
 
 You can see the number of syslog messages you received on the last minute on the WebUI [[web#main page|Main Page]].
-
-### What are software requirements for Octopussy ?
-
-You can get the list of software requirements in [Administrator Guide/Installation/Standard Installation/Software Requirements](http://www.octopussy.pm/documentation/guides/administrator_guide/01_installation).
-
 
 ### What is a Plugin in Octopussy ?
 
