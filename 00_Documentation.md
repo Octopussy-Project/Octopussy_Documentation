@@ -1,7 +1,9 @@
 Octopussy Documentation
 =======================
 
-![Octopussy logo](https://raw.githubusercontent.com/sebthebert/Octopussy_Documentation/master/img/pieuvre.gif)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/sebthebert/Octopussy_Documentation/master/img/pieuvre.gif" alt="Octopussy logo"/>
+</p>
 
 ## Table of Contents
 
