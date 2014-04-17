@@ -7,7 +7,7 @@ Octopussy Documentation
 
 ## Table of Contents
 
-- [Installation](blob/master/01_Installation.md)
+- [Installation](01_Installation.md)
     - [Debian/Ubuntu Installation](https://github.com/sebthebert/Octopussy_Documentation/blob/master/01_Installation.md#debianubuntu-installation)
     - [CentOS Installation](https://github.com/sebthebert/Octopussy_Documentation/blob/master/01_Installation.md#centos-installation)
     - [Fedora Installation](https://github.com/sebthebert/Octopussy_Documentation/blob/master/01_Installation.md#fedora-installation)
