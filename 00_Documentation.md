@@ -8,12 +8,12 @@ Octopussy Documentation
 ## Table of Contents
 
 - [Installation](01_Installation.md)
-    - [Debian/Ubuntu Installation](https://github.com/sebthebert/Octopussy_Documentation/blob/master/01_Installation.md#debianubuntu-installation)
-    - [CentOS Installation](https://github.com/sebthebert/Octopussy_Documentation/blob/master/01_Installation.md#centos-installation)
-    - [Fedora Installation](https://github.com/sebthebert/Octopussy_Documentation/blob/master/01_Installation.md#fedora-installation)
-    - [Gentoo Installation](https://github.com/sebthebert/Octopussy_Documentation/blob/master/01_Installation.md#gentoo-installation)
-    - [Standard Installation](https://github.com/sebthebert/Octopussy_Documentation/blob/master/01_Installation.md#standard-installation)
-    - [Configuring non-root user(s) to launch Octopussy programs](https://github.com/sebthebert/Octopussy_Documentation/blob/master/01_Installation.md#configuring-non-root-users-to-launch-octopussy-programs)
+    - [Debian/Ubuntu Installation](01_Installation.md#debianubuntu-installation)
+    - [CentOS Installation](01_Installation.md#centos-installation)
+    - [Fedora Installation](01_Installation.md#fedora-installation)
+    - [Gentoo Installation](01_Installation.md#gentoo-installation)
+    - [Standard Installation](01_Installation.md#standard-installation)
+    - [Configuring non-root user(s) to launch Octopussy programs](01_Installation.md#configuring-non-root-users-to-launch-octopussy-programs)
 
 - [Configuring Devices to send syslog messages to Octopussy](https://github.com/sebthebert/Octopussy_Documentation/blob/master/02_Configuring_Devices.md)
     - [Cisco Router/Switch (CatOS)](https://github.com/sebthebert/Octopussy_Documentation/blob/master/02_Configuring_Devices.md#cisco-routerswitch-catos)
