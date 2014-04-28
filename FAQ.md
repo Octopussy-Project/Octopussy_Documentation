@@ -15,7 +15,15 @@ If you need to get logs from files, you can use the `asynchronous` Device Log Ty
 
 Edit your Device configuration.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/sebthebert/Octopussy_Documentation/master/img/Device%20page%20-%20Edit%20button.png" alt="Device page - Edit button"/>
+</p>
+
 Add a `Log Regexp` input and a `Syslog Output`.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/sebthebert/Octopussy_Documentation/master/img/Device%20Log%20Type%20asynchronous.png" alt="Device Log Type asynchronous"/>
+</p>
 
 If your logs are already well formated (syslog with iso8601 datetime), 
 you just need to match the whole line `^(.+)$` and rewrite the same line `__1__`.
