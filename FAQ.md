@@ -9,6 +9,19 @@ You can change that limit by editing the parameter `wizard_max_msgs` in [/etc/aa
 
 Look at the Contribution section of the [Community page](http://www.octopussy.pm/community) on official website.
 
+### How can I handle logs from files ?
+
+If you need to get logs from files, you can use the `asynchronous` Device Log Type.
+
+Edit your Device configuration.
+
+Add a `Log Regexp` input and a `Syslog Output`.
+
+If your logs are already well formated (syslog with iso8601 datetime), 
+you just need to match the whole line `^(.+)$` and rewrite the same line `__1__`.
+
+If your log doesn't contain the Device name, you can use the `__device__` reserved word to add it.
+
 ### How can I handle Windows Hosts ?
 
 You can use [Snare Agent for Windows](http://www.intersectalliance.com/projects/SnareWindows/) to send Windows logs to Octopussy.
