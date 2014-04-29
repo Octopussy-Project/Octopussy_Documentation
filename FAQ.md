@@ -38,6 +38,8 @@ Take a look at [Configuring Devices / Windows Host with Snare Agent](https://git
 
 ### How can I login to Octopussy Web interface ?
 
+The default URL is **https://\<your_server\>:8888/**.
+
 The default **login / password** are **admin / admin**.
 
 ### What are software requirements for Octopussy ?
