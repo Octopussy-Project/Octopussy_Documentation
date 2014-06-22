@@ -620,7 +620,7 @@ postgres=# CREATE USER octopussy WITH PASSWORD 'octopussy';
 ```sql
 postgres=# CREATE DATABASE octopussy OWNER octopussy;
 ```
-  * Create your Octopussy **_alerts_** table
+  * Create your Octopussy **\_alerts\_** table
 ```sql
 CREATE TABLE _alerts_ (log_id SERIAL, alert_id varchar(250) default NULL, 
 status varchar(50) default 'Opened', level varchar(50) default NULL, 
