@@ -606,6 +606,28 @@ The **/etc/init.d/octopussy web-start** command launches Apache2 like this:
 If Octopussy doesn't work at this stage and you don't know why, submit a [Bug Report](http://sourceforge.net/tracker/?group_id=154314&atid=791284) !
 
 
+# Use PostgreSQL instead of MySQL
+
+**WORK IN PROGRESS...**
+
+If you want to use [PostgreSQL](http://www.postgresql.org/) instead of [MySQL](http://www.mysql.com/), you need to make this changes:
+  * Install [DBD::Pg](https://metacpan.org/pod/DBD::Pg) Perl module
+  * Create your Octopussy PostgreSQL user
+```sql
+postgres=# CREATE USER octopussy WITH PASSWORD 'octopussy';
+```
+  * Create your Octopussy PostgreSQL database: 
+```sql
+postgres=# CREATE DATABASE octopussy OWNER octopussy;
+```
+  * Create your Octopussy **_alerts_** table
+```sql
+CREATE TABLE _alerts_ (log_id SERIAL, alert_id varchar(250) default NULL, 
+status varchar(50) default 'Opened', level varchar(50) default NULL, 
+date_time timestamp default NULL, device varchar(250) default NULL, 
+log text default NULL, comment text default NULL, PRIMARY KEY  (log_id));
+```
+
 # Configuring non-root user(s) to launch Octopussy programs
 
 If you want to launch Octopussy programs with non-root user(s), you need to configure sudo.
