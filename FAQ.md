@@ -11,6 +11,8 @@ FAQ
 
 [How can I login to Octopussy Web interface ?](FAQ.md#how-can-i-login-to-octopussy-web-interface-)
 
+[How can I migrate Octopussy from one server to another one ?]
+
 [What are software requirements for Octopussy ?](FAQ.md#what-are-software-requirements-for-octopussy-)
 
 [What is a Device in Octopussy ?](https://github.com/sebthebert/Octopussy_Documentation/blob/master/FAQ.md#what-is-a-device-in-octopussy-)
@@ -61,6 +63,14 @@ Take a look at [Configuring Devices / Windows Host with Snare Agent](https://git
 The default URL is **https://\<your_server\>:8888/**.
 
 The default **login / password** are **admin / admin**.
+
+### How can I migrate Octopussy from one server to another one ?
+
+If you want to migrate Octopussy from one server to another one, follow these 4 steps:
+  * [Install Octopussy](https://github.com/sebthebert/Octopussy_Documentation/blob/master/01_Installation.md) on your new server
+  * Copy Octopussy configuration from your old server to your new one
+  * Configure your devices to send their logs to the new Octopussy server
+  * Finally move your logs from your old server to the new one 
 
 ### What are software requirements for Octopussy ?
 
