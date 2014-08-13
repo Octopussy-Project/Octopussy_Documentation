@@ -69,14 +69,10 @@ The default **login / password** are **admin / admin**.
 If you want to migrate Octopussy from one server to another one, follow these 4 steps:
   * [Install Octopussy](https://github.com/sebthebert/Octopussy_Documentation/blob/master/01_Installation.md) on your new server
   * Copy Octopussy configuration from your old server to your new one
-`
-scp -r /var/lib/octopussy/conf/ octopussy@new-octo-server:/var/lib/octopussy/
-`
+    * `scp -r /var/lib/octopussy/conf/ octopussy@new-octo-server:/var/lib/octopussy/`
   * [Configure your devices to send their logs](https://github.com/sebthebert/Octopussy_Documentation/blob/master/02_Configuring_Devices.md) to the new Octopussy server
   * Finally move your logs from your old server to the new one
-`
-scp -r /var/lib/octopussy/logs/ octopussy@new-octo-server:/var/lib/octopussy/
-`
+    * `scp -r /var/lib/octopussy/logs/ octopussy@new-octo-server:/var/lib/octopussy/`
 
 ### What are software requirements for Octopussy ?
 
