@@ -2,13 +2,21 @@ FAQ
 ===
 
 [How can I change the Logs Wizard messages limit ?](FAQ.md#how-can-i-change-the-logs-wizard-messages-limit-)
+
 [How can I contribute to Octopussy Project ?](FAQ.md#how-can-i-contribute-to-octopussy-project-)
+
 [How can I handle logs from files ?](FAQ.md#how-can-i-handle-logs-from-files-)
+
 [How can I handle Windows Hosts ?](FAQ.md#how-can-i-handle-windows-hosts-)
+
 [How can I login to Octopussy Web interface ?](FAQ.md#how-can-i-login-to-octopussy-web-interface-)
+
 [What are software requirements for Octopussy ?](FAQ.md#what-are-software-requirements-for-octopussy-)
+
 [What is a Device in Octopussy ?](https://github.com/sebthebert/Octopussy_Documentation/blob/master/FAQ.md#what-is-a-device-in-octopussy-)
+
 [What is a Message in Octopussy ?](FAQ.md#what-is-a-message-in-octopussy-)
+
 [What is a Service in Octopussy ?](FAQ.md#what-is-a-service-in-octopussy-)
 
 <hr>
