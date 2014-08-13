@@ -11,7 +11,7 @@ FAQ
 
 [How can I login to Octopussy Web interface ?](FAQ.md#how-can-i-login-to-octopussy-web-interface-)
 
-[How can I migrate Octopussy from one server to another one ?]
+[How can I migrate Octopussy from one server to another one ?](https://github.com/sebthebert/Octopussy_Documentation/blob/master/FAQ.md#how-can-i-migrate-octopussy-from-one-server-to-another-one-)
 
 [What are software requirements for Octopussy ?](FAQ.md#what-are-software-requirements-for-octopussy-)
 
