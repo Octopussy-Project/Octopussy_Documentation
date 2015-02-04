@@ -5,6 +5,8 @@ FAQ
 
 [How can I contribute to Octopussy Project ?](FAQ.md#how-can-i-contribute-to-octopussy-project-)
 
+[How can I encrypt my syslog traffic ?](FAQ.md#how-can-i-encrypt_my_syslog-traffic-)
+
 [How can I handle logs from files ?](FAQ.md#how-can-i-handle-logs-from-files-)
 
 [How can I handle Windows Hosts ?](FAQ.md#how-can-i-handle-windows-hosts-)
@@ -30,6 +32,10 @@ You can change that limit by editing the parameter `wizard_max_msgs` in [/etc/aa
 ### How can I contribute to Octopussy Project ? 
 
 Look at the Contribution section of the [Community page](http://www.octopussy.pm/community) on official website.
+
+### How can I encrypt my syslog traffic ?
+
+If you use rsyslog as your Octopussy logs source, you can [configure rsyslog to encrypt your syslog traffic with TLS](http://www.rsyslog.com/doc/rsyslog_tls.html).
 
 ### How can I handle logs from files ?
 
