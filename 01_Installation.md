@@ -2,7 +2,7 @@
 
 Please make sure that SELinux, AppArmor, or other security software like these are well configured in order to work with Octopussy and its software (Apache, MySQL, RSyslog, ...)
 
-(cf. Bug Report [#3097479](https://sourceforge.net/tracker/?func=detail&atid=791284&aid=3097479&group_id=154314))
+(cf. Issue [#213](https://github.com/sebthebert/Octopussy/issues/213#issuecomment-28749963))
 
 
 ## Debian/Ubuntu Installation
