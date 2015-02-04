@@ -29,4 +29,6 @@ Octopussy Documentation
     - [Windows Host with Snare Agent](02_Configuring_Devices.md#windows-host-with-snare-agent)
     - [Xen](02_Configuring_Devices.md#xen)
 
+- [Octopussy Command Line Tools](20_Octopussy_Command_Line_Tools.md)
+
 - [FAQ](FAQ.md)
