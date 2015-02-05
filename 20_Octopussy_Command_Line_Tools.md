@@ -28,8 +28,9 @@ Example 2 - Extraction of all logs from the `Sshd` Service on all your Devices f
 
 Example 3 -  Extraction of all logs from your `octo-devel` Device for July 2014
 ```shell
-/usr/sbin/octo_extractor --device octo-devel --service -ANY- --begin 201407010000 --end 201407302359
+/usr/sbin/octo_extractor --device octo-devel --service -ANY- --begin 201407010000 --end 201407312359
 ```
+
 ## octo_replay
 
 ```shell
