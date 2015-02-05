@@ -2,6 +2,48 @@
 
 All the Octopussy command line tools are located in `/usr/sbin/`.
 
+## octo_extractor
+
+```shell
+/usr/sbin/octo_extractor [options]
+```
+
+octo_extractor extracts desired logs.
+
+You need to specify at least:
+  * device (`-ANY-` if you want it all)
+  * service (`-ANY-` if you want it all)
+  * begin (YYYYMMDDHHMM timestamp)
+  * end (YYYYMMDDHHMM timestamp)
+
+Example 1 - Extraction of all logs from the `Octopussy` Service on `octo-devel` Device for May 2014:
+```shell
+/usr/sbin/octo_extractor --device octo-devel --service Octopussy --begin 201405010000 --end 201405312359
+```
+
+Example 2 - Extraction of all logs from the `Sshd` Service on all your Devices for June 2014:
+```shell
+/usr/sbin/octo_extractor --device -ANY- --service Sshd --begin 201406010000 --end 201406302359
+```
+
+Example 3 -  Extraction of all logs from your `octo-devel` Device for July 2014
+```shell
+/usr/sbin/octo_extractor --device octo-devel --service -ANY- --begin 201407010000 --end 201407302359
+```
+## octo_replay
+
+```shell
+/usr/sbin/octo_replay --device <device> --service <service> --begin YYYYMMDDHHMM --end YYYYMMDDHHMM
+````
+
+## octo_reporter
+
+```shell
+octo_reporter --report <report> --device <device> --service <service> 
+              --loglevel <loglevel> --taxonomy <taxonomy>
+              --begin YYYYMMDDHHMM --end YYYYMMDDHHMM [ --pid_param <string> ] --output <output_file>
+```
+
 ## octo_tool
 
 ```shell
