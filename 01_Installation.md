@@ -91,8 +91,8 @@ Install Perl modules requirements:
 	cpan DateTime::Format::Strptime DBD::mysql DBI File::Slurp
 	cpan JSON Linux::Inotify2 List::MoreUtils Locale::Maketext::Lexicon Locale::Maketext::Simple 
 	cpan LWP Mail::Sender Net::FTP Net::LDAP Net::SCP Net::Telnet Net::XMPP
-	cpan Proc::PID::File Proc::ProcessTable Readonly Regexp::Assemble Sys::CPU Term::ProgressBar Unix::Syslog 
-	cpan URI version XML::Simple
+	cpan Proc::PID::File Proc::ProcessTable Readonly Regexp::Assemble Sys::CPU Term::ProgressBar Time::Piece
+	cpan Unix::Syslog URI version XML::Simple
 
 Get the latest octopussy source package [here](http://sourceforge.net/project/showfiles.php?group_id=154314).
 Launch installation script:
@@ -217,7 +217,7 @@ Install Perl modules requirements:
 	yum install -y perl-LDAP perl-Net-SCP perl-Net-Telnet perl-Net-XMPP perl-Proc-PID-File perl-Proc-ProcessTable
 	yum install -y perl-Readonly-XS perl-Regexp-Assemble perl-Sys-CPU perl-Unix-Syslog perl-Term-ProgressBar perl-URI perl-version perl-XML-Simple
 
-	cpan Apache::ASP App::Info DateTime::Format::Strptime LWP Net::FTP
+	cpan Apache::ASP App::Info DateTime::Format::Strptime LWP Net::FTP Time::Piece
 
 Get the latest octopussy source package [here](http://sourceforge.net/project/showfiles.php?group_id=154314).
 Launch installation script:
@@ -357,6 +357,7 @@ and these Perl modules (from CPAN):
   * [Regexp::Assemble](https://metacpan.org/pod/Regexp::Assemble)
   * [Sys::CPU](https://metacpan.org/pod/Sys::CPU)
   * [Term::ProgressBar](https://metacpan.org/pod/Term::ProgressBar)
+  * [Time::Piece](https://metacpan.org/pod/Time::Piece)
   * [Unix::Syslog](https://metacpan.org/pod/Unix::Syslog)
   * [URI](https://metacpan.org/pod/URI)
   * [version](https://metacpan.org/pod/version)
@@ -369,8 +370,8 @@ Install Perl modules requirements:
 	cpan DateTime::Format::Strptime DBD::mysql DBI File::Slurp
 	cpan JSON Linux::Inotify2 List::MoreUtils Locale::Maketext::Lexicon Locale::Maketext::Simple 
 	cpan LWP Mail::Sender Net::FTP Net::LDAP Net::SCP Net::Telnet Net::XMPP
-	cpan Proc::PID::File Proc::ProcessTable Readonly Regexp::Assemble Sys::CPU Term::ProgressBar Unix::Syslog 
-	cpan URI version XML::Simple
+	cpan Proc::PID::File Proc::ProcessTable Readonly Regexp::Assemble Sys::CPU Term::ProgressBar Time::Piece
+	cpan Unix::Syslog URI version XML::Simple
 
 ### Software Installation
 
