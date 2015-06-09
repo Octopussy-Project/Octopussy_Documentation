@@ -1,6 +1,8 @@
 FAQ 
 ===
 
+[How can I change graphs colors ?](FAQ.md#how-can-i-change-graph-colors-)
+
 [How can I change the Logs Wizard messages limit ?](FAQ.md#how-can-i-change-the-logs-wizard-messages-limit-)
 
 [How can I contribute to Octopussy Project ?](FAQ.md#how-can-i-contribute-to-octopussy-project-)
@@ -24,6 +26,15 @@ FAQ
 [What is a Service in Octopussy ?](FAQ.md#what-is-a-service-in-octopussy-)
 
 <hr>
+
+### How can I change graphs colors ?
+
+You can change graphs colors by editing `color`fields in:
+  * [/var/lib/octopussy/conf/device_models.xml](https://github.com/sebthebert/Octopussy/blob/master/var/lib/octopussy/conf/device_models.xml) for DeviceTypes graphs
+  * [/var/lib/octopussy/conf/loglevel.xml](https://github.com/sebthebert/Octopussy/blob/master/var/lib/octopussy/conf/loglevel.xml) for Loglevel graphs
+  * [/var/lib/octopussy/conf/taxonomy.xml](https://github.com/sebthebert/Octopussy/blob/master/var/lib/octopussy/conf/taxonomy.xml) for Taxonomy graphs
+
+Of course, you need to restart Octopussy for the changes to take effect.
 
 ### How can I change the Logs Wizard messages limit ?
 
