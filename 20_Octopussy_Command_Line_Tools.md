@@ -51,7 +51,7 @@ octo_reporter --report <report> --device <device> --service <service>
 /usr/sbin/octo_tool <task> [options]
 ```
 
-octo_tool is the program to handle Octopussy's tasks.
+`octo_tool` is the program to handle Octopussy's tasks.
 
 ### octo_tool backup
 
@@ -118,7 +118,7 @@ and it will generate an `octopussy_config.tgz` backup file.
 ```
 
 You can easily duplicate an Octopussy Service to make your own and to better fits your need.
-If you want to modify the *Linux_Kernel* service to simplify it for example, you can launch that command
+If you want to modify the `Linux_Kernel` service to simplify it for example, you can launch that command
 ```shell
 /usr/sbin/octo_tool service_clone Linux_Kernel My_Linux_Kernel
 ```
@@ -132,7 +132,7 @@ and then play with that new service in the Web interface.
 ```
 
 You can easily duplicate an Octopussy Table to make your own and to better fits your need.
-If you want to modify the *Mail_Traffic* table to simplify it for example, you can launch that command
+If you want to modify the `Mail_Traffic` table to simplify it for example, you can launch that command
 ```shell
 /usr/sbin/octo_tool table_clone Mail_Traffic My_Mail_Traffic
 ```
