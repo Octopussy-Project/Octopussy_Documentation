@@ -82,9 +82,14 @@ Take a look at [Configuring Devices / Windows Host with Snare Agent](https://git
 You can limit the amount of logs stored by Octopussy in the **Device / Storages** page.
 
 Click on the 'Storages' icon of the Device you want to configure.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/sebthebert/Octopussy_Documentation/master/img/FAQ_device_storages_click.png" alt="Device Storages click"/>
+</p>
 
 Then choose the amount of logs you want for each Service of this Device.
-
+<p align="center">
+  <img src="https://raw.githubusercontent.com/sebthebert/Octopussy_Documentation/master/img/FAQ_device_storages_logrotate.png" alt="Device Storages logrotate"/>
+</p>
 
 ### How can I login to Octopussy Web interface ?
 
