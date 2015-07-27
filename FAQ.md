@@ -13,6 +13,8 @@ FAQ
 
 [How can I handle Windows Hosts ?](FAQ.md#how-can-i-handle-windows-hosts-)
 
+[How can I limit the amount of logs stored by Octopussy ?](FAQ.md#how-can-i-limit-the-amount-of-logs-stored-by-octopussy-)
+
 [How can I login to Octopussy Web interface ?](FAQ.md#how-can-i-login-to-octopussy-web-interface-)
 
 [How can I migrate Octopussy from one server to another one ?](https://github.com/sebthebert/Octopussy_Documentation/blob/master/FAQ.md#how-can-i-migrate-octopussy-from-one-server-to-another-one-)
@@ -74,6 +76,15 @@ If your log doesn't contain the Device name, you can use the `__device__` reserv
 You can use [Snare Agent for Windows](http://www.intersectalliance.com/projects/SnareWindows/) to send Windows logs to Octopussy.
 
 Take a look at [Configuring Devices / Windows Host with Snare Agent](https://github.com/sebthebert/Octopussy_Documentation/blob/master/02_Configuring_Devices.md#windows-host-with-snare-agent) section.
+
+### How can I limit the amount of logs stored by Octopussy ?
+
+You can limit the amount of logs stored by Octopussy in the **Device / Storages** page.
+
+Click on the 'Storages' icon of the Device you want to configure.
+
+Then choose the amount of logs you want for each Service of this Device.
+
 
 ### How can I login to Octopussy Web interface ?
 
