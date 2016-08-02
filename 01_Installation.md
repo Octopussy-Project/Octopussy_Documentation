@@ -376,7 +376,7 @@ Install Perl modules requirements:
 ### Software Installation
 
 Get the latest octopussy source package [here](http://sourceforge.net/project/showfiles.php?group_id=154314).
-If the *INSTALL.sh* installation script didn't work, follow these steps:
+If the [LINUX/INSTALL.sh](https://github.com/sebthebert/Octopussy/blob/master/LINUX/INSTALL.sh) installation script didn't work, follow these steps:
 
 #### Create Octopussy user and group
 
