@@ -604,7 +604,7 @@ The **/etc/init.d/octopussy web-start** command launches Apache2 like this:
 	/etc/init.d/octopussy start
 
 
-If Octopussy doesn't work at this stage and you don't know why, submit a [Bug Report](http://sourceforge.net/tracker/?group_id=154314&atid=791284) !
+If Octopussy doesn't work at this stage and you don't know why, submit a [Bug Report](https://github.com/sebthebert/Octopussy/issues) !
 
 
 # Use PostgreSQL instead of MySQL
