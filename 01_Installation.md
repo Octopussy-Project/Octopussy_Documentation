@@ -1,33 +1,36 @@
 # Octopussy Installation
 
+**NOTE: This documentation covers Octopussy 1.0.16 and greater. For older versions take a look at [this one](https://github.com/Octopussy-Project/Octopussy_Documentation/tree/1.0.14).**
+
 Please make sure that SELinux, AppArmor, or other security software like these are well configured in order to work with Octopussy and its software (Apache, MySQL, RSyslog, ...)
 
 (cf. Issues [#213](https://github.com/sebthebert/Octopussy/issues/213#issuecomment-28749963), [#305](https://github.com/sebthebert/Octopussy/issues/305#issuecomment-28750893), [#307](https://github.com/sebthebert/Octopussy/issues/307#issuecomment-28750930))
 
+## Installation with Ansible
+
+A lot of work have been done during [Hacktoberfest](https://hacktoberfest.digitalocean.com) 2017 to provide an [Octopussy Ansible Role](https://github.com/Octopussy-Project/ansible-role-octopussy) which covers CentOS, Debian & Ubuntu installation.
+
+I build a complete platform with Ansible & Docker to test Octopussy installation on:
+  * CentOS 6 & 7
+	* Debian 8 & 9
+	* Ubuntu 14.04 & 16.04
+
 
 ## Debian/Ubuntu Installation
-*(tested on Debian 5&6 and Ubuntu 10.04)*
+*(tested on Debian 8 & 9  and Ubuntu 14.04 & 16.04)*
 
 Get the latest octopussy debian package [here](http://sourceforge.net/project/showfiles.php?group_id=154314|here).
 
-**Debian 6 WARNING:**
-On Debian 6, for [stupid reason](http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=568652) ([Debian Free Software Guidelines](http://www.debian.org/social_contract) #6 violation), the package `libmail-sender-perl` is not in `/main/` section anymore but in `/non-free/` section.
-You had to insert these 2 lines in  `/etc/apt/sources.list` file if you want to install Octopussy properly:
 
-```
-deb http://ftp.fr.debian.org/debian/ squeeze non-free
-deb-src http://ftp.fr.debian.org/debian/ squeeze non-free
-```
+Update your system with 'apt-get update':
 
-followed by an 'apt-get update':
-
-```
+```shell
 apt-get update
 ```
 
 Then install Octopussy:
 
-```
+```shell
 dpkg -i octopussy_<version>_all.deb
 apt-get -f install
 ```
@@ -62,56 +65,39 @@ openssl req -new -x509 -nodes -sha1 -days 365 -key /etc/octopussy/server.key > /
 ```
 and then restart Octopussy webserver
 
-```shell	
+```shell
 /etc/init.d/octopussy web-stop
 /etc/init.d/octopussy web-start
 ```
 
 ## CentOS Installation
-*(tested on CentOS 5.5 & 6.4 (64 bit))*
+*(tested on CentOS 6.9 & 7.4)*
 
 ### Software Installation
 
 Install software requirements:
 
 ```shell
-yum install -y httpd perl mod_perl mod_ssl mysql mysql-server nscd rsyslog sudo
-```
-
-(required for CPAN)
-	
-```
-yum install -y gcc make cpan
-```
-
-`rrdtool` & `htmldoc` are not available on CentOS by default.
-Add DAG repository (create `/etc/yum.repos.d/dag.repo` file and add:
-
-```
-[dag]
-name=Dag RPM Repository for Red Hat Enterprise Linux
-baseurl=http://apt.sw.be/redhat/el$releasever/en/$basearch/dag
-gpgcheck=1
-gpgkey=http://dag.wieers.com/rpm/packages/RPM-GPG-KEY.dag.txt
-enabled=1
-```
-
-and then install rrdtool and htmldoc
-
-```shell
-yum install -y rrdtool htmldoc
+yum install -y epel-release expat-devel gcc make htmldoc httpd \
+	mod_perl mod_ssl \
+	mysql mysql-devel mysql-server \
+  nscd openssl-devel patch \
+  perl perl-devel perl-CPAN \
+  psmisc rrdtool rsyslog sudo
 ```
 
 Install Perl modules requirements:
 
-```shell	
-cpan Apache::ASP App::Info App::Info::HTTPD Cache::Cache Crypt::PasswdMD5
-cpan SBECK/Date-Manip-5.56.tar.gz
-cpan DateTime::Format::Strptime DBD::mysql DBI File::Slurp
-cpan JSON Linux::Inotify2 List::MoreUtils Locale::Maketext::Lexicon Locale::Maketext::Simple 
-cpan LWP Mail::Sender Net::FTP Net::LDAP Net::SCP Net::Telnet Net::XMPP
-cpan Proc::PID::File Proc::ProcessTable Readonly Regexp::Assemble Sys::CPU Term::ProgressBar Time::Piece
-cpan Unix::Syslog URI version XML::Simple
+```shell
+cpan Apache::ASP App::Info App::Info::HTTPD Authen::SASL Cache::Cache \
+  Crypt::PasswdMD5 Data::GUID Date::Manip \
+  Time::Hires Test2::Require::Module \
+  DateTime::Format::Strptime DBD::mysql DBI \
+  Email::MIME Email::Sender Getopt::Long IO::Socket::SSL \
+  JSON Linux::Inotify2 List::MoreUtils \
+  Locale::Maketext::Lexicon Locale::Maketext::Simple \
+  LWP Net::FTP Net::LDAP Net::SCP Net::SSLeay Net::Telnet Net::XMPP \ Pod::Find Pod::Usage Proc::PID::File Proc::ProcessTable Readonly \ Regexp::Assemble Sys::CPU Term::ProgressBar Time::Piece \
+  Unix::Syslog URI version XML::Simple
 ```
 
 Get the latest octopussy source package [here](http://sourceforge.net/project/showfiles.php?group_id=154314).
@@ -226,7 +212,7 @@ openssl req -new -x509 -nodes -sha1 -days 365 -key /etc/octopussy/server.key > /
 
 and then restart Octopussy webserver
 
-```shell	
+```shell
 /etc/init.d/octopussy web-stop
 /etc/init.d/octopussy web-start
 ```
@@ -385,7 +371,7 @@ You can take a look at this [documentation](http://en.gentoo-wiki.com/wiki/Octop
 
 ### Software Requirements
 
-Before installing Octopussy, be sure to have installed: 
+Before installing Octopussy, be sure to have installed:
 
   * [Apache2](http://httpd.apache.org)
   * [Apache::ASP](http://www.apache-asp.org)
@@ -436,7 +422,7 @@ Install Perl modules requirements:
 cpan Apache::ASP App::Info Cache::Cache Crypt::PasswdMD5
 cpan SBECK/Date-Manip-5.56.tar.gz
 cpan DateTime::Format::Strptime DBD::mysql DBI File::Slurp
-cpan JSON Linux::Inotify2 List::MoreUtils Locale::Maketext::Lexicon Locale::Maketext::Simple 
+cpan JSON Linux::Inotify2 List::MoreUtils Locale::Maketext::Lexicon Locale::Maketext::Simple
 cpan LWP Mail::Sender Net::FTP Net::LDAP Net::SCP Net::Telnet Net::XMPP
 cpan Proc::PID::File Proc::ProcessTable Readonly Regexp::Assemble Sys::CPU Term::ProgressBar Time::Piece
 cpan Unix::Syslog URI version XML::Simple
@@ -599,7 +585,7 @@ Here is what you have in this file:
     	StartServers          2
     	MaxClients          150
     	MinSpareThreads      25
-    	MaxSpareThreads      75 
+    	MaxSpareThreads      75
     	ThreadsPerChild      25
     	MaxRequestsPerChild   0
 	</IfModule>
@@ -721,15 +707,15 @@ If you want to use [PostgreSQL](http://www.postgresql.org/) instead of [MySQL](h
 ```sql
 postgres=# CREATE USER octopussy WITH PASSWORD 'octopussy';
 ```
-  * Create your Octopussy PostgreSQL database: 
+  * Create your Octopussy PostgreSQL database:
 ```sql
 postgres=# CREATE DATABASE octopussy OWNER octopussy;
 ```
   * Create your Octopussy **\_alerts\_** table
 ```sql
-CREATE TABLE _alerts_ (log_id SERIAL, alert_id varchar(250) default NULL, 
-status varchar(50) default 'Opened', level varchar(50) default NULL, 
-date_time timestamp default NULL, device varchar(250) default NULL, 
+CREATE TABLE _alerts_ (log_id SERIAL, alert_id varchar(250) default NULL,
+status varchar(50) default 'Opened', level varchar(50) default NULL,
+date_time timestamp default NULL, device varchar(250) default NULL,
 log text default NULL, comment text default NULL, PRIMARY KEY  (log_id));
 ```
 
