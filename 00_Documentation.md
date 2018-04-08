@@ -5,6 +5,8 @@ Octopussy Documentation
   <img src="https://raw.githubusercontent.com/sebthebert/Octopussy_Documentation/master/img/pieuvre.gif" alt="Octopussy logo"/>
 </p>
 
+**NOTE: This documentation covers Octopussy 1.0.16 and greater. For older versions take a look at [this one](https://github.com/Octopussy-Project/Octopussy_Documentation/tree/1.0.14).**
+
 ## Table of Contents
 
 - [Installation](01_Installation.md)
